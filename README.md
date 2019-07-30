@@ -20,8 +20,10 @@ Onboarding information for new members of the FIU cognitive neuroscience program
 3. Follow instructions [here](https://castic.fiu.edu/main/app/core/helpguides/Papercut-Mac.pdf) to obtain access to printer queue. This will allow you to send your print jobs to a queue and release the jobs on the Toshiba printers on campus using your Panther ID card.
 
 ## Setting up necessary software
+Attempt to follow the installation instructions for the below software. However, note that, if you have a lab laptop, you may run into issues with your privileges on the computer. If you do not have admin privileges on your FIU-owned computer, you will need to go through cybersecurity training from CASTIC first and then download an app titled "Privileges" through CASTIC.
+
 ## Necessary Software
-1. A [VNC client](http://ircc.fiu.edu/visualization/): You will need a VNC client like VNCViewer in order to access visualization nodes on the HPC.
+1. A [VNC client](http://ircc.fiu.edu/visualization/): You will need a VNC client like VNCViewer or DCV Nice in order to access visualization nodes on the HPC.
 2. A [VPN Client](https://network.fiu.edu/vpn/): You will need a VPN client like Cisco AnyConnect in order to access the HPC from home.
 3. An SCP Client: You will need an SCP client like [Cyberduck](https://cyberduck.io) to transfer files to and from the HPC.
 4. [git](https://help.github.com/en/articles/set-up-git): git is necessary for version control and is a key component of GitHub.
