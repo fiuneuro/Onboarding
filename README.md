@@ -22,7 +22,7 @@ Onboarding information for new members of the FIU cognitive neuroscience program
 ## Setting up necessary software on your laptop
 Attempt to follow the installation instructions for the below software. However, note that, if you have a lab laptop, you may run into issues with your privileges on the computer. If you do not have admin privileges on your FIU-owned computer, you will need to go through cybersecurity training from CASTIC first and then download an app titled "Privileges" through CASTIC.
 
-## Necessary software for your laptop
+Install the following software:
 1. A [VNC client](http://ircc.fiu.edu/visualization/): You will need a VNC client like VNCViewer or DCV Nice in order to access visualization nodes on the HPC.
     - If your HPC account has not been created yet, you can still download the software, but you won't be able to use it.
 2. A [VPN Client](https://network.fiu.edu/vpn/): You will need a VPN client like Cisco AnyConnect in order to access the HPC from home.
