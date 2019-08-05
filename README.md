@@ -46,13 +46,13 @@ Attempt to follow the installation instructions for the below software. However,
 > git config --global user.email "mlisa001@fiu.edu"
 
 ### 3. Set up your ssh key
-- Follow the instructions [here](https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) to generate a new ssh key for your account on the HPC.
 - Remember to make your password easy to remember (you will be typing it a lot)
 
-- Use the code below to copy your key to your Clipboard, then paste it to your GitHub account settings --> SSH Keys --> add SSH key
+- Use the code below to print your public key.
 ```bash
 cat ~/.ssh/id_rsa.pub
 ```
+- Copy the key to your Clipboard, then paste it to your GitHub account settings (on the website) --> SSH Keys --> add SSH key
 
 ### 4. Modify your ~/.ssh/config file using nano
  1. Test if SSH over the HTTPS port is possible. Run this SSH command:
