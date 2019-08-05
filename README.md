@@ -19,10 +19,10 @@ Onboarding information for new members of the FIU cognitive neuroscience program
 2. Follow instructions [here](http://ircc.fiu.edu/accounts/) to obtain access to the FIU High Performance Cluster (HPC). Most labs perform most of their data analysis on the HPC.
 3. Follow instructions [here](https://castic.fiu.edu/main/app/core/helpguides/Papercut-Mac.pdf) to obtain access to printer queue. This will allow you to send your print jobs to a queue and release the jobs on the Toshiba printers on campus using your Panther ID card.
 
-## Setting up necessary software
+## Setting up necessary software on your laptop
 Attempt to follow the installation instructions for the below software. However, note that, if you have a lab laptop, you may run into issues with your privileges on the computer. If you do not have admin privileges on your FIU-owned computer, you will need to go through cybersecurity training from CASTIC first and then download an app titled "Privileges" through CASTIC.
 
-## Necessary Software
+## Necessary software for your laptop
 1. A [VNC client](http://ircc.fiu.edu/visualization/): You will need a VNC client like VNCViewer or DCV Nice in order to access visualization nodes on the HPC.
     - If your HPC account has not been created yet, you can still download the software, but you won't be able to use it.
 2. A [VPN Client](https://network.fiu.edu/vpn/): You will need a VPN client like Cisco AnyConnect in order to access the HPC from home.
@@ -33,3 +33,51 @@ Attempt to follow the installation instructions for the below software. However,
 5. PaperCut: See above for more information on how to install this software.
 6. Slack: See above.
 7. [Google Drive File Stream](https://support.google.com/drive/answer/7329379)
+
+## Setting up git on the HPC
+
+### 1. Get a [GitHub](https://github.com/) account
+
+### 2. Set up Git on HPC
+[Set your user name](https://help.github.com/en/articles/setting-your-username-in-git) as your name:
+> git config --global user.name "Mona Lisa"
+
+[Set your user email](https://help.github.com/en/articles/setting-your-commit-email-address) as the email address you used for your GitHub account:
+> git config --global user.email "mlisa001@fiu.edu"
+
+### 3. Set up your ssh key
+- Follow the instructions [here](https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) to generate a new ssh key for your account on the HPC.
+- Remember to make your password easy to remember (you will be typing it a lot)
+
+- Use the code below to copy your key to your Clipboard, then paste it to your GitHub account settings --> SSH Keys --> add SSH key
+```bash
+cat ~/.ssh/id_rsa.pub
+```
+
+### 4. Modify your ~/.ssh/config file using nano
+ 1. Test if SSH over the HTTPS port is possible. Run this SSH command:
+
+```bash
+ssh -T -p 443 git@ssh.github.com
+```
+
+You should see:
+
+> Hi username! You've successfully authenticated, but GitHub does not provide shell access.
+
+- Enable SSH connections over HTTPS
+
+```bash
+nano ~/.ssh/config
+```
+
+Add the following lines:  
+> Host github.com  
+> Hostname ssh.github.com  
+> Port 443
+
+You may also see the following line somewhere in the file:
+> UserKnownHostsFile /dev/null
+If you see that line, change `/dev/null` to `~/.ssh/known_hosts`.
+If you don't see that line, add the following line to the file:
+> UserKnownHostsFile ~/.ssh/known_hosts
