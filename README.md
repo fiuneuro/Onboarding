@@ -36,25 +36,28 @@ Install the following software:
 
 ## Setting up git on the HPC
 
-### 1. Get a [GitHub](https://github.com/) account
+#### 1. Get a [GitHub](https://github.com/) account
 
-### 2. Set up Git on HPC
+#### 2. Set up Git on HPC
 [Set your user name](https://help.github.com/en/articles/setting-your-username-in-git) as your name:
 > git config --global user.name "Mona Lisa"
 
 [Set your user email](https://help.github.com/en/articles/setting-your-commit-email-address) as the email address you used for your GitHub account:
 > git config --global user.email "mlisa001@fiu.edu"
 
-### 3. Add your ssh key to GitHub
-- Use the code below to print your public key.
+#### 3. Add your ssh key to GitHub
+Use the code below to print your public key.
+
 ```bash
 cat ~/.ssh/id_rsa.pub
 ```
-- Copy the key to your Clipboard, then paste it to your GitHub account settings (on the website) --> SSH and GPG Keys --> add SSH key
-    - Name it "HPC"
 
-### 4. Modify your ~/.ssh/config file using nano
- 1. Test if SSH over the HTTPS port is possible. Run this SSH command:
+Copy the key to your Clipboard, then paste it to your GitHub account settings (on the website) --> SSH and GPG Keys --> add SSH key
+
+Name it "HPC"
+
+#### 4. Test your SSH connection
+Test if SSH over the HTTPS port is possible. Run this SSH command:
 
 ```bash
 ssh -T -p 443 git@ssh.github.com
@@ -62,9 +65,9 @@ ssh -T -p 443 git@ssh.github.com
 
 You should see:
 
-> Hi username! You've successfully authenticated, but GitHub does not provide shell access.
+> Hi [username]! You've successfully authenticated, but GitHub does not provide shell access.
 
-- Enable SSH connections over HTTPS
+#### 5. Modify your ~/.ssh/config file
 
 ```bash
 gedit ~/.ssh/config
