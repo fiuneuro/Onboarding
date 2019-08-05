@@ -77,6 +77,7 @@ Add the following lines:
 
 You may also see the following line somewhere in the file:
 > UserKnownHostsFile /dev/null
+
 If you see that line, change `/dev/null` to `~/.ssh/known_hosts`.
 If you don't see that line, add the following line to the file:
 > UserKnownHostsFile ~/.ssh/known_hosts
