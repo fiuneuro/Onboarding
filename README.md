@@ -57,6 +57,8 @@ Copy the key to your Clipboard, then paste it to your GitHub account settings (o
 
 Name it "HPC"
 
+NOTE: Steps 3-5 reflect an abbreviated version of the full set of instructions for connecting to GitHub using SSH, although they should work for everyone with HPC access. If you have problems with this step or the next two, try following the full instructions detailed [here](https://help.github.com/en/articles/connecting-to-github-with-ssh).
+
 #### 4. Test your SSH connection
 Test if SSH over the HTTPS port is possible. Run this SSH command:
 
