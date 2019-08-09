@@ -43,14 +43,14 @@ Install the following software:
 Do the following to SSH onto login node 2 of the HPC:
 > ssh [username]@hpclogin02.fiu.edu
 
-#### 2. Set up Git on HPC
+#### 3. Set up Git on HPC
 [Set your user name](https://help.github.com/en/articles/setting-your-username-in-git) as your name:
 > git config --global user.name "Mona Lisa"
 
 [Set your user email](https://help.github.com/en/articles/setting-your-commit-email-address) as the email address you used for your GitHub account:
 > git config --global user.email "mlisa001@fiu.edu"
 
-#### 3. Add your ssh key to GitHub
+#### 4. Add your SSH key to GitHub
 Use the code below to print your public key.
 
 ```bash
@@ -61,11 +61,11 @@ Copy the key to your Clipboard, then paste it to your GitHub account settings (o
 
 Name it "HPC"
 
-NOTE: Steps 3-5 reflect an abbreviated version of the full set of instructions for connecting to GitHub using SSH, although they should work for everyone with HPC access. If you have problems with this step or the next two, try following the full instructions detailed [here](https://help.github.com/en/articles/connecting-to-github-with-ssh).
+NOTE: Steps 4-6 reflect an abbreviated version of the full set of instructions for connecting to GitHub using SSH, although they should work for everyone with HPC access. If you have problems with this step or the next two, try following the full instructions detailed [here](https://help.github.com/en/articles/connecting-to-github-with-ssh).
 
 One common reason this step may fail is because you don't have an existing RSA key. Follow the instructions to generate one from the link above.
 
-#### 4. Test your SSH connection
+#### 5. Test your SSH connection
 Test if SSH over the HTTPS port is possible. Run this SSH command:
 
 ```bash
@@ -76,7 +76,7 @@ You should see:
 
 > Hi [username]! You've successfully authenticated, but GitHub does not provide shell access.
 
-#### 5. Modify your ~/.ssh/config file
+#### 6. Modify your SSH configuration file
 
 ```bash
 nano ~/.ssh/config
