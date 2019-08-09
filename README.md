@@ -59,6 +59,8 @@ Name it "HPC"
 
 NOTE: Steps 3-5 reflect an abbreviated version of the full set of instructions for connecting to GitHub using SSH, although they should work for everyone with HPC access. If you have problems with this step or the next two, try following the full instructions detailed [here](https://help.github.com/en/articles/connecting-to-github-with-ssh).
 
+One common reason this step may fail is because you don't have an existing RSA key. Follow the instructions to generate one from the link above.
+
 #### 4. Test your SSH connection
 Test if SSH over the HTTPS port is possible. Run this SSH command:
 
@@ -87,3 +89,5 @@ You may also see the following line somewhere in the file:
 If you see that line, change `/dev/null` to `~/.ssh/known_hosts`.
 If you don't see that line, add the following line to the file:
 > UserKnownHostsFile ~/.ssh/known_hosts
+
+**NOTE**: If you do not have a config file, then copy the example one from this repository into your .ssh folder.
