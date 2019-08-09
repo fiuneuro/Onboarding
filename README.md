@@ -75,19 +75,26 @@ You should see:
 #### 5. Modify your ~/.ssh/config file
 
 ```bash
-gedit ~/.ssh/config
+nano ~/.ssh/config
 ```
 
+**NOTE**: If you do not have a config file (or if it is empty), then copy [the example one from this repository](https://github.com/FIU-Neuro/Onboarding/blob/master/templates/.ssh/config) into your .ssh folder.
+
 Add the following lines:  
+> UserKnownHostsFile ~/.ssh/known_hosts
 > Host github.com  
 > Hostname ssh.github.com  
 > Port 443
 
-You may also see the following line somewhere in the file:
+You may see the following line somewhere in the file:
 > UserKnownHostsFile /dev/null
 
-If you see that line, change `/dev/null` to `~/.ssh/known_hosts`.
-If you don't see that line, add the following line to the file:
-> UserKnownHostsFile ~/.ssh/known_hosts
+If you see it, remove that line. We are replacing it with the first line that you pasted into the file.
 
-**NOTE**: If you do not have a config file, then copy the example one from this repository into your .ssh folder.
+To save the file and exit nano, do the following:
+
+```
+Ctrl-X
+y
+Enter
+```
