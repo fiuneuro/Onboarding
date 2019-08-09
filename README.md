@@ -39,6 +39,10 @@ Install the following software:
 
 #### 1. Get a [GitHub](https://github.com/) account
 
+#### 2. SSH onto the HPC
+Do the following to SSH onto login node 2 of the HPC:
+> ssh [username]@hpclogin02.fiu.edu
+
 #### 2. Set up Git on HPC
 [Set your user name](https://help.github.com/en/articles/setting-your-username-in-git) as your name:
 > git config --global user.name "Mona Lisa"
