@@ -37,68 +37,39 @@ Install the following software:
 
 ## Setting up git on the HPC
 
-#### 1. Get a [GitHub](https://github.com/) account
-
-#### 2. SSH onto the HPC
-Do the following to SSH onto login node 2 of the HPC:
-> ssh [username]@hpclogin02.fiu.edu
-
-#### 3. Set up Git on HPC
-[Set your user name](https://help.github.com/en/articles/setting-your-username-in-git) as your name:
-> git config --global user.name "Mona Lisa"
-
-[Set your user email](https://help.github.com/en/articles/setting-your-commit-email-address) as the email address you used for your GitHub account:
-> git config --global user.email "mlisa001@fiu.edu"
-
-#### 4. Add your SSH key to GitHub
-Use the code below to print your public key.
-
-```bash
-cat ~/.ssh/id_rsa.pub
-```
-
-Copy the key to your Clipboard, then paste it to your GitHub account settings (on the website) --> SSH and GPG Keys --> add SSH key
-
-Name it "HPC"
-
-NOTE: Steps 4-6 reflect an abbreviated version of the full set of instructions for connecting to GitHub using SSH, although they should work for everyone with HPC access. If you have problems with this step or the next two, try following the full instructions detailed [here](https://help.github.com/en/articles/connecting-to-github-with-ssh).
-
-One common reason this step may fail is because you don't have an existing RSA key. Follow the instructions to generate one from the link above.
-
-#### 5. Test your SSH connection
-Test if SSH over the HTTPS port is possible. Run this SSH command:
-
-```bash
-ssh -T -p 443 git@ssh.github.com
-```
-
-You should see:
-
-> Hi [username]! You've successfully authenticated, but GitHub does not provide shell access.
-
-#### 6. Modify your SSH configuration file
-
-```bash
-nano ~/.ssh/config
-```
-
-**NOTE**: If you do not have a config file (or if it is empty), then copy [the example one from this repository](https://github.com/FIU-Neuro/Onboarding/blob/master/templates/.ssh/config) into your .ssh folder.
-
-Add the following lines:  
-> UserKnownHostsFile ~/.ssh/known_hosts
-> Host github.com  
-> Hostname ssh.github.com  
-> Port 443
-
-You may see the following line somewhere in the file:
-> UserKnownHostsFile /dev/null
-
-If you see it, remove that line. We are replacing it with the first line that you pasted into the file.
-
-To save the file and exit nano, do the following:
-
-```
-Ctrl-X
-y
-Enter
-```
+1. Get a [GitHub](https://github.com/) account
+2. SSH onto the HPC
+    - Do the following to SSH onto login node 2 of the HPC:
+        - `ssh [username]@hpclogin02.fiu.edu`
+3. Set up Git on HPC
+    1. [Set your user name](https://help.github.com/en/articles/setting-your-username-in-git) as your name:
+        - `git config --global user.name "Mona Lisa"`
+    2. [Set your user email](https://help.github.com/en/articles/setting-your-commit-email-address) as the email address you used for your GitHub account:
+        - `git config --global user.email "mlisa001@fiu.edu"`
+4. Add your SSH key to GitHub
+    1. Use the code below to print your public key:
+        - `cat ~/.ssh/id_rsa.pub`
+    2. Copy the key to your Clipboard, then paste it to your GitHub account settings (on the website) --> SSH and GPG Keys --> add SSH key
+        - Name it "HPC"
+    - NOTE: Steps 4-6 reflect an abbreviated version of the full set of instructions for connecting to GitHub using SSH, although they should work for everyone with HPC access. If you have problems with this step or the next two, try following the full instructions detailed [here](https://help.github.com/en/articles/connecting-to-github-with-ssh).
+    - One common reason this step may fail is because you don't have an existing RSA key. Follow the instructions to generate one from the link above.
+5. Test your SSH connection
+    1. Test if SSH over the HTTPS port is possible. Run this SSH command:
+        - `ssh -T -p 443 git@ssh.github.com`
+    2. You should see:
+        - > Hi [username]! You've successfully authenticated, but GitHub does not provide shell access.
+6. Modify your SSH configuration file
+    1. `nano ~/.ssh/config`
+        - **NOTE**: If you do not have a config file (or if it is empty), then copy [the example one from this repository](https://github.com/FIU-Neuro/Onboarding/blob/master/templates/.ssh/config) into your .ssh folder.
+    2. Add the following lines:  
+        - > UserKnownHostsFile ~/.ssh/known_hosts
+        - > Host github.com  
+        - > Hostname ssh.github.com  
+        - > Port 443
+    3. You may see the following line somewhere in the file:
+        - > UserKnownHostsFile /dev/null
+        - If you see it, remove that line. We are replacing it with the first line that you pasted into the file.
+    4. To save the file and exit nano, do the following:
+        1. Ctrl-X
+        2. y
+        3. Enter
