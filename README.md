@@ -63,9 +63,9 @@ Install the following software:
         - **NOTE**: If you do not have a config file (or if it is empty), then copy [the example one from this repository](https://github.com/FIU-Neuro/Onboarding/blob/master/templates/.ssh/config) into your .ssh folder.
     2. Add the following lines:  
         - > UserKnownHostsFile ~/.ssh/known_hosts
-        - > Host github.com  
-        - > Hostname ssh.github.com  
-        - > Port 443
+          > Host github.com  
+          > Hostname ssh.github.com  
+          > Port 443
     3. You may see the following line somewhere in the file:
         - > UserKnownHostsFile /dev/null
         - If you see it, remove that line. We are replacing it with the first line that you pasted into the file.
