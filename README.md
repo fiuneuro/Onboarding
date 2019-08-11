@@ -49,10 +49,9 @@ Install the following software:
 4. Add your SSH key to GitHub
     1. Use the code below to print your public key:
         - `cat ~/.ssh/id_rsa.pub`
+        - **NOTE**: If you see this error (`cat: ~/.ssh/id_rsa.pub: No such file or directory`), that means that you don't have an RSA key set up yet. Follow the instructions [here](https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) to generate one. When it asks for the file to save the key to, just hit `Enter`. When it asks for a passphrase, just hit `Enter` (so there will be no passphrase).
     2. Copy the key to your Clipboard, then paste it to your GitHub account settings (on the website) --> SSH and GPG Keys --> add SSH key
         - Name it "HPC"
-    - **NOTE**: This step and the next two reflect an abbreviated version of the full set of instructions for connecting to GitHub using SSH, although they should work for everyone with HPC access. If you have problems with this step or the next two, try following the full instructions detailed [here](https://help.github.com/en/articles/connecting-to-github-with-ssh).
-        - One common reason this step may fail is because you don't have an existing RSA key. Follow the instructions to generate one from the link above.
 5. Test your SSH connection
     1. Test if SSH over the HTTPS port is possible. Run this SSH command:
         - `ssh -T -p 443 git@ssh.github.com`
