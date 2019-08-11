@@ -62,7 +62,7 @@ Install the following software:
     1. `nano ~/.ssh/config`
         - **NOTE**: If you do not have a config file (or if it is empty), then copy [the example one from this repository](https://github.com/FIU-Neuro/Onboarding/blob/master/templates/.ssh/config) into your .ssh folder.
     2. Add the following lines:  
-        - > UserKnownHostsFile ~/.ssh/known_hosts. 
+        - > UserKnownHostsFile ~/.ssh/known_hosts   
           > Host github.com  
           > Hostname ssh.github.com  
           > Port 443
