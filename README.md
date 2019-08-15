@@ -6,6 +6,7 @@ Onboarding information for new members of the FIU cognitive neuroscience program
 - [Google Scholar](https://scholar.google.com)
 - [GitHub](https://github.com)
 - [Trello](https://trello.com)
+- [Personal Website] (http://myweb.fiu.edu/)
 
 ## Organizational accounts to request access to
 - GitHub: [FIU-Neuro](https://github.com/FIU-Neuro) and your lab's organization
