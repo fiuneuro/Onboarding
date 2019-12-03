@@ -12,7 +12,7 @@ Onboarding information for new members of the FIU cognitive neuroscience program
 - GitHub: [FIU-Neuro](https://github.com/FIU-Neuro) and your lab's organization
     - NOTE: Set your membership visibility to "Public"
 - Slack: [FIU Neuro](http://fiuneuro.slack.com) and your lab's workspace
-- Google Calendar: **FIU Neuroscience** and your lab's calendar
+- Google Calendar: [FIU Neuroscience](https://calendar.google.com/calendar?cid=Zml1LmVkdV9tNmU4NDdoZjl0Z2dyY3J1aW0xc252cXZyZ0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t) and your lab's calendar
 - Trello: [FIU Neuro](https://trello.com/fiuneuro/home) and your lab's organization
 
 ## For incoming graduate students
